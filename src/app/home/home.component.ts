@@ -35,5 +35,15 @@ export class HomeComponent {
     availableUnits: 99,
     wifi: true,
     laundry: false,
+  }
+  housingLocation1: HousingLocation = {
+    id: 9998,
+    name: 'Prueba',
+    city: 'Probando',
+    state: 'xd',
+    photo: `${this.baseUrl}/example-house.jpg`,
+    availableUnits: 99,
+    wifi: true,
+    laundry: false,
   };
 }
