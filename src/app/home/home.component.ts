@@ -32,12 +32,13 @@ export class HomeComponent {
 
 
   constructor(){
-    this. housingLocationList=this.housingService.getAllHousingLocations();
-    // Al iniciar la página, se muestran todas las ubicaciones
-    this.filteredLocationList = this.housingLocationList;
+    this.housingService.getAllHousingLocations().then((housingLocationList: HousingLocation[]) => {
+      this.housingLocationList = housingLocationList;
+      this.filteredLocationList = housingLocationList;
+    });
   }
 
-  
+
   filterResults(text: string) {
     if (!text) {
       this.filteredLocationList = this.housingLocationList;
